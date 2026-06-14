@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏥 Doctor Hub — Healthcare Consultation Platform
 > Final Semester Project | Full-Stack Web Application
 
@@ -118,3 +119,6 @@ doctor-hub/
 │       └── pages/      # All pages/dashboards
 └── verify.js           # Automated tests
 ```
+=======
+# doctor-hub
+>>>>>>> 6fa08c48254eab3a358ed028994b44b3d7183f1e
