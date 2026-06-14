@@ -1,0 +1,25 @@
+services:
+  # Backend API — deployed as a Web Service on Render (free tier)
+  - type: web
+    name: doctor-hub-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SUPABASE_URL
+        sync: false          # Set this manually in Render dashboard
+      - key: SUPABASE_SERVICE_KEY
+        sync: false          # Set this manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false          # Set this manually in Render dashboard
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_URL
+        sync: false          # Set to your Vercel URL e.g. https://doctor-hub.vercel.app
+    healthCheckPath: /api/health
+    autoDeploy: true
