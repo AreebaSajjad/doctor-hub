@@ -112,7 +112,7 @@ const getMe = async (req, res) => {
         .select('*, clinics(name, city, address)').eq('user_id', req.user.id).single();
       profile = data;
     } else if (req.user.role === 'patient') {
-      const { data } = await supabase.from('patients').eq('user_id', req.user.id).select('*').single();
+      const { data } = await supabase.from('patients').select('*').eq('user_id', req.user.id).single();
       profile = data;
     } else if (req.user.role === 'assistant') {
       const { data } = await supabase.from('assistants')

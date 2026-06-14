@@ -45,21 +45,7 @@ export function LoginPage() {
         </button>
       </form>
 
-      {/* Quick login hints */}
-      <div style={{ marginTop: 24, padding: 16, background: 'var(--bg-elevated)', borderRadius: 'var(--radius-md)', fontSize: 12 }}>
-        <p style={{ color: 'var(--text-muted)', marginBottom: 8, fontWeight: 600 }}>🔑 Demo Accounts (Password: Password123!)</p>
-        {[
-          ['Patient', 'hamza@patient.pk'],
-          ['Doctor', 'ahmed.khan@doctorhub.pk'],
-          ['Assistant', 'ali.assistant@doctorhub.pk'],
-          ['Admin', 'admin@doctorhub.pk'],
-        ].map(([role, email]) => (
-          <button key={role} onClick={() => setForm({ email, password: 'Password123!' })}
-            style={{ display: 'block', width: '100%', textAlign: 'left', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--primary)', padding: '3px 0', fontSize: 12 }}>
-            {role}: {email}
-          </button>
-        ))}
-      </div>
+      
 
       <p className="text-center mt-24 text-sm">
         Don't have an account? <Link to="/register">Create one</Link>
