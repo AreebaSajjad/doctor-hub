@@ -1,4 +1,5 @@
 const { createClient } = require('@supabase/supabase-js');
+const fetch = require('node-fetch');
 require('dotenv').config();
 
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -13,7 +14,8 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey, {
   auth: {
     autoRefreshToken: false,
     persistSession: false
-  }
+  },
+  global: { fetch }
 });
 
 module.exports = supabase;
