@@ -190,7 +190,7 @@ export default function LandingPage() {
             <span style={{ fontSize: 20 }}>🏥</span>
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Doctor Hub</span>
           </div>
-          <p className="text-muted text-sm">© 2024 Doctor Hub. Final Semester Project. All rights reserved.</p>
+          <p className="text-muted text-sm">© 2026 Doctor Hub. 6th Semester Project.Made by Areeba Sajjad. All rights reserved.</p>
         </div>
       </footer>
     </div>
